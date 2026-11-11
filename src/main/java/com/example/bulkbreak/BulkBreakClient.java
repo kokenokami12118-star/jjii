@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 
 /** 右Shiftキー(設定で変更可)で一括破壊の操作画面を開く。 */
 public class BulkBreakClient implements ClientModInitializer {
@@ -19,8 +18,8 @@ public class BulkBreakClient implements ClientModInitializer {
 
         openKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.bulk-break.open",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_RIGHT_SHIFT,
+                InputConstants.Type.KEYBOARD,
+                InputConstants.KEY_RSHIFT,
                 category));
 
         ClientTickEvents.END_CLIENT_TICK.register(mc -> {
