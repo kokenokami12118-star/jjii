@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "bulk-break",
+  "version": "${version}",
+  "name": "Bulk Break",
+  "description": "オンにすると、つながった同じブロックをまとめて壊す。右Shiftで設定画面を開く",
+  "authors": [],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.bulkbreak.BulkBreakMod"],
+    "client": ["com.example.bulkbreak.BulkBreakClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
